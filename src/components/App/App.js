@@ -208,9 +208,13 @@ function App() {
             value={currentUser}>
 
             <div className="app">
-                {useRouteMatch(hideHeader) ? null :
-                    (<Header loggedIn={loggedIn}/>
-                    )}
+                {/*{useRouteMatch(hideHeader) ? null :*/}
+                {/*    (<Header loggedIn={loggedIn}/>*/}
+                {/*    )}*/}
+
+                <Route exact path={['/', '/movies', '/saved-movies', '/profile']}>
+                    <Header loggedIn={loggedIn} />
+                </Route>
 
                 <Switch>
                     <Route exact path="/">
@@ -289,13 +293,20 @@ function App() {
                     >
                     </ProtectedRoute>
 
-                    <Route path='/not-found'>
-                        <NotFound/>
+                    <Route path="*">
+                        <NotFound />
                     </Route>
-                    <Redirect to='/not-found'/>
-                </Switch>
 
-                {useRouteMatch(hideFooter) ? null : <Footer/>}
+
+                    {/*<Route path='/not-found'>*/}
+                    {/*    <NotFound/>*/}
+                    {/*</Route>*/}
+                    {/*<Redirect to='/not-found'/>*/}
+                </Switch>
+                <Route exact path={['/', '/movies', '/saved-movies']}>
+                    <Footer />
+                </Route>
+                {/*{useRouteMatch(hideFooter) ? null : <Footer/>}*/}
             </div>
         </CurrentUserContext.Provider>
     );

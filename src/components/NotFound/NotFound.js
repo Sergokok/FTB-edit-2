@@ -1,11 +1,14 @@
 import React from "react";
-// import { useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import "./NotFound.css";
 
 function NotFound() {
-    // const history = useHistory();
+    const history = useHistory();
+    // function goBack() {
+    //     window.history.go(-2);
+    // }
     function goBack() {
-        window.history.go(-2);
+        history.goBack();
     }
 
     return (
