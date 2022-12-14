@@ -1,0 +1,14 @@
+.movies {
+    width: 100%;
+    padding-bottom: 80px;
+}
+
+.movies__more-button:hover {
+    transition: .5s;
+    box-shadow:  10px 10px 20px #808080;
+}
+
+.movies__more-button:active {
+    transition: .5s;
+    box-shadow: inset 5px 5px 10px #808080;
+}

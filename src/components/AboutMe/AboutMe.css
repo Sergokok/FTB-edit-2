@@ -1,0 +1,135 @@
+.about-me {
+    padding: 110px 70px 100px 70px;
+}
+
+.about-me__title {
+    margin: 0 0 66px 0;
+    padding: 0 0 23px 0;
+    font-size: 22px;
+    font-weight: 400;
+    border-bottom: 1px solid #000000;
+}
+
+.about-me__info {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.about-me__info-container {
+    max-width: 600px;
+}
+
+.about-me__name {
+    font-size: 50px;
+    font-weight: 400;
+    margin: 0 0 18px 0;
+}
+
+.about-me__profession {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0 0 26px 0;
+}
+
+.about-me__description {
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.about-me__photo {
+    width: 270px;
+    height: 327px;
+    border-radius: 10px;
+}
+
+.about-me__socials {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    padding: 30px 0 0 0;
+    margin: 0;
+}
+
+.about-me__link {
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+    font-weight: 500;
+    border-bottom: 1px solid transparent;
+    transition: .5s;
+}
+
+.about-me__link:hover {
+    transition: .5s;
+    border-bottom: 1px solid #000000;
+}
+
+@media (max-width: 768px) {
+    .about-me {
+        padding: 90px 50px;
+    }
+
+    .about-me__title {
+        margin: 90px 0 66px 0;
+    }
+
+    .about-me__info-container {
+        max-width: 364px;
+    }
+
+    .about-me__photo {
+        width: 255px;
+        height: 307px;
+    }
+
+    .about-me__name {
+        font-size: 40px;
+    }
+
+    .about-me__info {
+        margin: 0 0 90px 0;
+    }
+}
+
+@media (max-width: 550px) {
+    .about-me__info {
+        flex-direction: column-reverse;
+        margin: 0;
+    }
+}
+
+@media (max-width: 350px) {
+    .about-me {
+        padding: 70px 14px;
+    }
+
+    .about-me__title {
+        font-size: 18px;
+    }
+
+    .about-me__info {
+        flex-direction: column-reverse;
+        margin: 0;
+    }
+
+    .about-me__name {
+        font-size: 30px;
+    }
+
+    .about-me__profession {
+        font-size: 11px;
+    }
+
+    .about-me__about {
+        font-size: 11px;
+    }
+
+    .about-me__photo {
+        width: 100%;
+        height: 100%;
+        align-self: center;
+    }
+}

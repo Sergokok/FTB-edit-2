@@ -1,0 +1,108 @@
+.movies-card {
+    border-radius: 6px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    align-self: center;
+    justify-self: center;
+}
+
+
+.movies-card__img {
+    width: 100%;
+    object-fit: cover;
+    background-position: center;
+    aspect-ratio: 16/9;
+
+}
+
+.movies-card__info {
+    padding: 16px;
+    display: grid;
+    grid-template-columns: 1fr 30px;
+    align-items: center;
+    gap: 17px 12px;
+}
+
+.movies-card__title {
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    font-weight: 500;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.movies-card__length {
+    margin: 0;
+    padding: 0;
+    font-size: 11px;
+    font-weight: 400;
+    color: #A0A0A0;
+}
+
+.movies-card__like-button {
+    background: url('../../images/movies-like-button-not-active.svg') no-repeat center;
+    background-size: contain;
+    width: 14px;
+    height: 12px;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.movies-card__like-button_active {
+    background:  url('../../images/movies-like-button-active.svg') no-repeat;
+    width: 14px;
+    height: 12px;
+    border: none;
+    padding: 0;
+}
+
+.movies-card__delete {
+    width: 30px;
+    height: 30px;
+    background: none center;
+    background-size: contain;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.movies-card__info:hover .movies-card__delete {
+    background:  url('../../images/movies-card-delete-button.svg') no-repeat;
+}
+
+@media (max-width: 768px) {
+    .movies-card__delete {
+        background:  url('../../images/movies-card-delete-button.svg') no-repeat;
+    }
+}
+
+@media (max-width: 320px) {
+
+    .movies-card__title {
+        font-size: 12px;
+    }
+
+    .movies-card__info {
+        padding: 14px;
+        display: grid;
+        gap: 14px 6px;
+    }
+
+    .movies-card__title {
+        font-size: 12px;
+    }
+
+    .movies-card__length {
+        font-size: 10px;
+    }
+
+}
+

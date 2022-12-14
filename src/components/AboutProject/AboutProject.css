@@ -1,0 +1,137 @@
+.about-project {
+    padding: 0 70px;
+}
+
+.about-project__title {
+    display: flex;
+    margin: 110px 0 70px 0;
+    padding: 0 0 23px 0;
+    font-size: 22px;
+    font-weight: 400;
+    border-bottom: 1px solid #000000;
+}
+
+.about-project__description {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.about-project__description-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 550px;
+    margin: 0 0 110px 0;
+    gap: 26px;
+}
+
+.about-project__description-subtitle {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.about-project__description-text {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.about-project__timing {
+    margin: 0 0 110px 0;
+    display: flex;
+}
+
+.about-project__timing-container {
+    width: 100%;
+}
+
+.about-project__timing-container_backend {
+    max-width: 228px;
+}
+
+.about-project__timing-subtitle {
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F2F2F2;
+}
+
+.about-project__timing-text {
+    color: #A0A0A0;
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 36px;
+}
+
+.about-project__timing-subtitle_highlight {
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+@media (max-width: 768px) {
+    .about-project {
+        padding: 0 50px;
+    }
+
+    .about-project__description {
+        gap: 30px;
+    }
+
+    .about-project__description-container {
+        gap: 22px;
+    }
+
+    .about-project__timing {
+        margin-bottom: 90px;
+    }
+
+    .about-project__description-text {
+        font-size: 12px;
+    }
+
+    .about-project__timing-container_backend {
+        max-width: 140px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-project {
+        padding: 0 18px;
+    }
+
+    .about-project__title {
+        font-size: 18px;
+    }
+
+    .about-project__description {
+        flex-direction: column;
+        gap: 56px;
+    }
+
+    .about-project__description-container {
+        gap: 16px;
+        margin: 0;
+    }
+
+    .about-project__description-container:last-of-type {
+        margin-bottom: 60px;
+    }
+
+    .about-project__timing {
+        margin: 70px 0;
+    }
+
+    .about-project__timing-container_backend {
+        max-width: 100px;
+    }
+}

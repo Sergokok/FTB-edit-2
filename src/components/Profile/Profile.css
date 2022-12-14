@@ -1,0 +1,118 @@
+.profile {
+    margin: 74px 70px 70px;
+    display: flex;
+    justify-content: center;
+}
+
+.profile__form {
+    display: flex;
+    flex-direction: column;
+    width: 410px;
+}
+
+.profile__title {
+    margin: 0;
+    padding: 0 0 123px;
+    font-size: 24px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.profile__fieldset {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.profile__label {
+    font-size: 11px;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+    padding: 16px 0 17px;
+    border-bottom: 1px solid #E8E8E8;
+}
+
+.profile__input {
+    font-size: 11px;
+    font-weight: 400;
+    text-align: right;
+    border: none;
+    outline: none;
+    background-color: #fff;
+    padding: 0;
+}
+
+.profile__button {
+    background: #fff;
+    color: #000;
+    font-size: 13px;
+    font-weight: 400;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    margin: 0 auto;
+    border-bottom: 1px solid transparent;
+    transition: .5s;
+    padding: 0;
+}
+
+.profile__button-submit {
+    padding-top: 220px;
+}
+
+.profile__button-edit {
+    margin-top: 220px;
+}
+
+.profile__button-edit_disabled:disabled, .profile__button-submit_disabled[disabled] {
+    cursor: default;
+    opacity: 0.5;
+}
+
+.profile__button-edit_disabled:disabled:hover, .profile__button-submit_disabled[disabled]:hover {
+    border-bottom: transparent 1px solid;
+}
+
+.profile__button:hover {
+    transition: .5s;
+    border-bottom: 1px solid #000000;
+}
+
+.profile__button-exit {
+    color: #FF4062;
+    margin-top: 16px;
+}
+
+.profile__button-exit:hover {
+    transition: .5s;
+    border-bottom: 1px solid #FF4062;
+}
+
+.profile__button-disabled {
+    background-color: #fff;
+    border: 1px solid #A0A0A0;
+    color: #A0A0A0;
+    cursor: not-allowed;
+}
+
+.profile__error {
+    display: none;
+    padding: 6px 0 0;
+    color: #FF4062;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 12px;
+}
+
+.profile__error_active {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .profile {
+        margin: 74px 20px 20px;
+    }
+
+}
