@@ -2,9 +2,11 @@ import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import "./SearchForm.css";
 import FilterCheckbox from "../FilterCheckbox/FilterCheckbox";
-import {moviesApi} from "../../utils/MoviesApi";
+// import {moviesApi} from "../../utils/MoviesApi";
+import {ERROR_INPUT_SEARCH_MOVIES} from "../../utils/constants";
 
 const SearchForm = ({ onSubmit, checkClick, searchKeyword, isShort, setAllMovies }) => {
+    const [errorSetWord, setErrorSetWord] = useState('');
 
     const location = useLocation();
 
@@ -17,12 +19,17 @@ const SearchForm = ({ onSubmit, checkClick, searchKeyword, isShort, setAllMovies
     }, [searchKeyword, location.pathname]);
 
     const handleInputChange = (event) => {
+        setErrorSetWord('');
         setMovies(event.target.value);
     }
 
     const handleSearch = (event) => {
         event.preventDefault();
-        onSubmit(movie);
+        if (movie === '') {
+            setErrorSetWord(ERROR_INPUT_SEARCH_MOVIES);
+        } else {
+            onSubmit(movie);
+        }
     }
 
     return (
@@ -32,10 +39,13 @@ const SearchForm = ({ onSubmit, checkClick, searchKeyword, isShort, setAllMovies
                     type="text"
                     className="search-form__input"
                     placeholder="Фильм"
-                    required={true}
+                    // required={true}
                     onChange={handleInputChange}
                     value={movie}
                 />
+
+                <span className="search-form__input-error">{errorSetWord}</span>
+
                 <button className="search-form__button" type="submit">Поиск</button>
             </form>
             <FilterCheckbox
@@ -47,17 +57,3 @@ const SearchForm = ({ onSubmit, checkClick, searchKeyword, isShort, setAllMovies
 }
 
 export default SearchForm;
-
-// function SearchForm() {
-//     return (
-//         <section className="search-form">
-//             <form className="search-form__container">
-//                 <input className="search-form__input" type="text" placeholder="Фильм" required/>
-//                 <button className="search-form__button" type="submit">Поиск</button>
-//             </form>
-//             <FilterCheckbox />
-//         </section>
-//     )
-// }
-
-// export default SearchForm;

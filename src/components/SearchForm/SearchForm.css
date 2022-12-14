@@ -56,6 +56,18 @@
     transition: .5s;
 }
 
+.search-form__input-error {
+    height: 12px;
+    font-size: 10px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 12px;
+    color: #FF4062;
+    padding: 0;
+    margin: 2px 0;
+    text-align: center;
+}
+
 @media (max-width: 768px) {
     .search-form {
         margin: 70px 30px 0 30px;

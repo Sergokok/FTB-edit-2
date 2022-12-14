@@ -3,7 +3,7 @@ import Preloader from "../Preloader/Preloader";
 import SearchForm from "../SearchForm/SearchForm";
 import MoviesCardList from "../MoviesCardList/MoviesCardList";
 import "./SavedMovies.css";
-import {moviesApi} from "../../utils/MoviesApi";
+// import {moviesApi} from "../../utils/MoviesApi";
 
 const SavedMovies = ({
     isLoading,

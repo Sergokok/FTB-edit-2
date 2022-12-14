@@ -5,7 +5,7 @@ import "./NotFound.css";
 function NotFound() {
     // const history = useHistory();
     function goBack() {
-        window.history.go(-3);
+        window.history.go(-2);
     }
 
     return (

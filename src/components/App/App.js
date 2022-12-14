@@ -59,6 +59,7 @@ function App() {
                     if (err.status === 401) signOut();
                 })
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     useEffect(() => {
@@ -122,7 +123,7 @@ function App() {
             .setUserInfo (user, localStorage.getItem('jwt'))
             .then ((userInfo) => {
                 setProfileMessage('Данные пользователя успешно обновлены');
-                setCurrentUser(userInfo);
+                setCurrentUser(userInfo.data);
             })
             .catch ((err) => {
                 setProfileMessage('Ошибка редактирования данных профиля. Попробуйте ещё раз.');

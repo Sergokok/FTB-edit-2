@@ -2,6 +2,7 @@ import React, {useState, useEffect, useContext} from 'react';
 import './Profile.css';
 import {CurrentUserContext} from "../../contexts/CurrentUserContext";
 import {FormValidation} from "../../utils/FormValidation";
+import {EMAIL_PATTERN} from "../../utils/constants";
 
 const Profile = ({onEditProfile, signOut, infoMessage}) => {
 
@@ -16,9 +17,9 @@ const Profile = ({onEditProfile, signOut, infoMessage}) => {
         resetForm();
     }
 
-    const handleFocus = (evt) => {
-        evt.target.select();
-    }
+    // const handleFocus = (evt) => {
+    //     evt.target.select();
+    // }
 
     useEffect(() => {
         if (currentUser) {
@@ -53,7 +54,7 @@ const Profile = ({onEditProfile, signOut, infoMessage}) => {
                             required={true}
                             value={name}
                             onChange={handleChange}
-                            onFocus={handleFocus}
+                            // onFocus={handleFocus}
                         />
                     </label>
                     <span
@@ -69,9 +70,10 @@ const Profile = ({onEditProfile, signOut, infoMessage}) => {
                             name='email'
                             placeholder='Email'
                             required={true}
+                            pattern={EMAIL_PATTERN}
                             value={email}
                             onChange={handleChange}
-                            onFocus={handleFocus}
+                            // onFocus={handleFocus}
                         />
                     </label>
                     <span
